@@ -1,0 +1,360 @@
+/* Blog Page Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.blog-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(165, 161, 161, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('imahes/Prayerflags.jpeg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 180px;
+}
+
+.blog-hero-content h1 {
+  font-size: 3.5rem;
+  color: #f8f9fa;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.blog-hero-content p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+/* Featured Post */
+.featured-post {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.featured-post:hover {
+  transform: translateY(-5px);
+}
+
+.featured-image {
+  flex: 1;
+  min-height: 400px;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-content {
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  padding: 0.4rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.featured-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.post-meta {
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.featured-content p {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #e74c3c;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: gap 0.3s ease;
+}
+
+.read-more:hover {
+  gap: 1.2rem;
+}
+
+/* Blog Posts Grid */
+.blog-posts {
+  margin-bottom: 4rem;
+}
+
+.blog-posts h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.blog-posts h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #e74c3c;
+  border-radius: 2px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.post-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.post-image {
+  height: 50px;
+  overflow: hidden;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.post-card:hover .post-image img {
+  transform: scale(1.05);
+}
+
+.post-content {
+  padding: 1.8rem;
+}
+
+.post-content .category {
+  background: #3498db;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.post-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.post-content .post-meta {
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    border-left: 4px solid #007bff;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #007bff;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.read-more i {
+    transition: transform 0.3s ease;
+}
+
+.read-more.active {
+    color: #0056b3;
+}
+
+.read-more.active i {
+    transform: rotate(90deg);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Newsletter */
+.newsletter {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+  padding: 4rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  z-index: 0;
+}
+
+.newsletter h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+.subscribe-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 1.1rem 1.5rem;
+  border: none;
+  border-radius: 50px 0 0 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.subscribe-form button {
+  padding: 0 2.5rem;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .featured-post {
+    flex-direction: column;
+  }
+  
+  .featured-image {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-hero {
+    height: 50vh;
+  }
+  
+  .blog-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-content h2 {
+    font-size: 2rem;
+  }
+  
+  .subscribe-form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .subscribe-form input,
+  .subscribe-form button {
+    width: 100%;
+    border-radius: 50px;
+  }
+}

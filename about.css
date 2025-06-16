@@ -1,0 +1,257 @@
+/* About Page Styles */
+.about-container {
+  /* max-width: 1200px; */
+  margin-top: 100px;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-section {
+  position: relative;
+  height: 70vh;
+  background: url('imahes/AboutUs.jpg') center/cover no-repeat;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 80%;
+  max-width: 800px;
+}
+  
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color:aqua;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.intro-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro-content h2 span {
+  color: #e74c3c;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.story-section {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.story-content {
+  flex: 1;
+}
+
+.story-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.story-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.story-image {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.why-us-section {
+  margin-bottom: 4rem;
+}
+
+.why-us-section h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-card i {
+  font-size: 3rem;
+  color: #e74c3c;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.mission-section {
+  background: linear-gradient(rgba(231, 76, 60, 0.9), rgba(231, 76, 60, 0.9)), 
+              url('imahes/mission-bg.jpg') center/cover;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.mission-section h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-button {
+  background: rgb(207, 178, 178);
+  color: #e74c3c;
+  border: none;
+  padding: 1rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #f8f9fa;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-section {
+  margin-bottom: 4rem;
+}
+
+.team-section h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-card img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.team-card p {
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .story-section {
+    flex-direction: column;
+  }
+  
+  .hero-section {
+    height: 60vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+    color:aqua;
+  }
+
+  .hero-content p {
+    font-size: 0.8rem;
+    color:rgb(255, 255, 255)
+  }
+}
